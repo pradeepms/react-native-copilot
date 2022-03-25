@@ -225,9 +225,11 @@ class CopilotModal extends Component<Props, State> {
     this.props.prev();
   }
 
-  handleStop = () => {
+  handleStop = (wasSkipped) => {
+    wasSkipped = typeof wasSkipped !== "boolean" ? false : wasSkipped;
+
     this.reset();
-    this.props.stop();
+    this.props.stop(wasSkipped);
   }
 
   handleMaskClick = () => {
