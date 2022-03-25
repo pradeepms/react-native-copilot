@@ -5,6 +5,7 @@ import type { CopilotContext } from '../types';
 
 type Props = {
   name: string,
+  title: string,
   text: string,
   order: number,
   active?: boolean,
@@ -44,6 +45,7 @@ class ConnectedCopilotStep extends Component<Props> {
   register() {
     this.props._copilot.registerStep({
       name: this.props.name,
+      title: this.props.title,
       text: this.props.text,
       order: this.props.order,
       target: this,

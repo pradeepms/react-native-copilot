@@ -9,6 +9,7 @@ import type { CopilotContext } from '../types';
 type Props = {
   name: string,
   order: number, // eslint-disable-line react/no-unused-prop-types
+  title: string,
   text: string, // eslint-disable-line react/no-unused-prop-types
 };
 
